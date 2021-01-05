@@ -1,13 +1,11 @@
 package com.bin.service;
 
-import com.bin.dao.UserMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 
-public class UserService {
+import com.bin.domain.TbUser;
 
-    @Autowired
-    private UserMapper userMapper;
+public interface UserService {
 
+    TbUser findById(String id);
 
-
+    TbUser findByUsername(String username);
 }
